@@ -1,0 +1,48 @@
+{
+  "title": "GoSoft Solutions | Desarrollo de Software",
+  "meta": {
+    "description": "Sitio web en construcción. GoSoft Solutions - Empresa líder en desarrollo de software y soluciones tecnológicas.",
+    "keywords": "desarrollo software, tecnología, GoSoft Solutions, aplicaciones web, aplicaciones móviles"
+  },
+  "hero": {
+    "title": "Sitio en Construcción",
+    "description": "Estamos trabajando arduamente para ofrecerte una experiencia excepcional. Nuestro nuevo sitio web estará disponible muy pronto.",
+    "services": {
+      "web": {
+        "title": "Desarrollo Web",
+        "description": "Aplicaciones web modernas y escalables"
+      },
+      "mobile": {
+        "title": "Apps Móviles", 
+        "description": "Soluciones móviles innovadoras"
+      },
+      "consulting": {
+        "title": "Consultoría",
+        "description": "Estrategias tecnológicas efectivas"
+      }
+    },
+    "quickLinksTitle": "Mientras tanto, puedes consultar",
+    "contactTitle": "¿Necesitas contactarnos?",
+    "phone": "[Teléfono de contacto]"
+  },
+  "policies": {
+    "title": "Políticas y Términos",
+    "backHome": "← Volver al Inicio",
+    "lastUpdated": "Última actualización:",
+    "navigation": {
+      "privacyPolicy": "Aviso de Privacidad",
+      "termsConditions": "Términos y Condiciones", 
+      "cookiePolicy": "Política de Cookies",
+      "legalDisclaimer": "Aviso Legal",
+      "vulnerabilityDisclosure": "Política de Divulgación de Vulnerabilidades",
+      "dataProtection": "Política Corporativa de Protección de Datos Personales",
+      "qualityPolicy": "Política de Calidad",
+      "environmentalPolicy": "Política Ambiental"
+    },
+    "contact": {
+      "email": "privacy@gosoftsolutions.com",
+      "phone": "[Número de contacto]",
+      "address": "[Dirección de la empresa]"
+    }
+  }
+}

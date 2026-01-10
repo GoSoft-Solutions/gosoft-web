@@ -1,0 +1,48 @@
+{
+  "title": "GoSoft Solutions | Software Development",
+  "meta": {
+    "description": "Website under construction. GoSoft Solutions - Leading company in software development and technology solutions.",
+    "keywords": "software development, technology, GoSoft Solutions, web applications, mobile applications"
+  },
+  "hero": {
+    "title": "Website Under Construction",
+    "description": "We are working hard to offer you an exceptional experience. Our new website will be available very soon.",
+    "services": {
+      "web": {
+        "title": "Web Development",
+        "description": "Modern and scalable web applications"
+      },
+      "mobile": {
+        "title": "Mobile Apps",
+        "description": "Innovative mobile solutions"
+      },
+      "consulting": {
+        "title": "Consulting",
+        "description": "Effective technology strategies"
+      }
+    },
+    "quickLinksTitle": "In the meantime, you can check",
+    "contactTitle": "Need to contact us?",
+    "phone": "[Contact phone number]"
+  },
+  "policies": {
+    "title": "Policies and Terms",
+    "backHome": "← Back to Home",
+    "lastUpdated": "Last updated:",
+    "navigation": {
+      "privacyPolicy": "Privacy Policy",
+      "termsConditions": "Terms and Conditions",
+      "cookiePolicy": "Cookie Policy", 
+      "legalDisclaimer": "Legal Disclaimer",
+      "vulnerabilityDisclosure": "Vulnerability Disclosure Policy",
+      "dataProtection": "Corporate Personal Data Protection Policy",
+      "qualityPolicy": "Quality Policy",
+      "environmentalPolicy": "Environmental Policy"
+    },
+    "contact": {
+      "email": "privacy@gosoftsolutions.com",
+      "phone": "[Contact number]",
+      "address": "[Company address]"
+    }
+  }
+}
