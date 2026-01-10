@@ -194,10 +194,6 @@ export default function PersonalDataProtectionPolicyPageEN() {
             <p className="text-gray-700">
               <strong>Email:</strong> privacy@gosoftsolutions.com
             </p>
-              <div className="text-sm">
-                <strong>Email:</strong> privacy@gosoftsolutions.com
-              </div>
-            </div>
           </div>
         </div>
       </main>

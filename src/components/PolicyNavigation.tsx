@@ -1,8 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { useTranslations } from 'next-intl';
-import { Link } from '@/i18n/routing';
+import Link from 'next/link';
 import { ChevronLeftIcon, ChevronRightIcon, Bars3Icon } from '@heroicons/react/24/outline';
 
 interface PolicyNavigationProps {
@@ -10,7 +9,6 @@ interface PolicyNavigationProps {
 }
 
 export default function PolicyNavigation({ currentPage }: PolicyNavigationProps) {
-  const t = useTranslations('policies');
   const [isCollapsed, setIsCollapsed] = useState(false);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
 
