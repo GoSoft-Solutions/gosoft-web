@@ -74,11 +74,23 @@ const Footer = () => {
                   </Link>
                   {/* Email - POSICIÓN: cambia marginTop independiente */}
                   <Link 
-                    href="https://mail.google.com/mail/?view=cm&to=gosoftsolutions25@gmail.com&su=Consulta%20sobre%20servicios%20-%20Empezar%20con%20GoSoft"
+                    href="#"
                     className="block"
-                    target="_blank"
-                    rel="noopener noreferrer"
                     style={{ marginTop: '-5.5px' }}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+                      const email = 'gosoftsolutions25@gmail.com';
+                      const subject = 'Consulta sobre servicios - Empezar con GoSoft';
+                      
+                      if (isMobile) {
+                        // En móvil: intentar abrir app nativa de Gmail
+                        window.location.href = `mailto:${email}?subject=${encodeURIComponent(subject)}`;
+                      } else {
+                        // En desktop: abrir Gmail web
+                        window.open(`https://mail.google.com/mail/?view=cm&to=${email}&su=${encodeURIComponent(subject)}`, '_blank');
+                      }
+                    }}
                   >
                     <Image 
                       src="/icons/email_icon.svg" 
