@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
 
 export const metadata: Metadata = {
-  title: 'GoSoft Solutions | Desarrollo de Software',
+  title: 'GoSoft Solutions',
   description: 'Sitio web próximamente. GoSoft Solutions - Empresa líder en desarrollo de software y soluciones tecnológicas.',
   keywords: 'desarrollo software, tecnología, GoSoft Solutions, aplicaciones web, aplicaciones móviles',
 };

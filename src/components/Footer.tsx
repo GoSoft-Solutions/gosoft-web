@@ -29,44 +29,62 @@ const Footer = () => {
               </p>
             </div>
 
-            {/* Iconos de redes sociales */}
-            <div className="flex space-x-4">
-              <Link href="#" className="block" target="_blank" rel="noopener noreferrer">
-                <Image 
-                  src="/icons/whatsapp_icon.svg" 
-                  alt="WhatsApp" 
-                  width={34} 
-                  height={34}
-                  className="hover:opacity-80 transition-opacity"
-                />
-              </Link>
-              <Link href="#" className="block" target="_blank" rel="noopener noreferrer">
-                <Image 
-                  src="/icons/email_icon.svg" 
-                  alt="Email" 
-                  width={28.5} 
-                  height={28.5}
-                  className="hover:opacity-80 transition-opacity"
-                />
-              </Link>
-              <Link href="https://www.instagram.com/gosoftmx" className="block" target="_blank" rel="noopener noreferrer">
-                <Image 
-                  src="/icons/ig_icon.svg" 
-                  alt="Instagram" 
-                  width={30.2} 
-                  height={30.2}
-                  className="hover:opacity-80 transition-opacity"
-                />
-              </Link>
-              <Link href="https://www.linkedin.com/company/gosoftmx" className="block" target="_blank" rel="noopener noreferrer">
-                <Image 
-                  src="/icons/linkedin_icon.svg" 
-                  alt="LinkedIn" 
-                  width={28} 
-                  height={28}
-                  className="hover:opacity-80 transition-opacity"
-                />
-              </Link>
+            {/* Iconos de contacto y redes sociales */}
+            <div className="flex space-x-17 mt-9 items-start">
+              {/* Sección Síguenos */}
+              <div>
+                <h5 className="text-gray-500 font-medium text-xs uppercase tracking-wider mb-2">Síguenos</h5>
+                <div className="flex space-x-3 items-center">
+                  <Link href="https://www.instagram.com/gosoftmx" className="block" target="_blank" rel="noopener noreferrer"
+                        style={{ marginRight: '15px' }}>
+                    <Image 
+                      src="/icons/ig_icon.svg" 
+                      alt="Instagram" 
+                      width={30.3} 
+                      height={30.3}
+                      className="hover:opacity-80 transition-opacity"
+                    />
+                  </Link>
+                  <Link href="https://www.linkedin.com/company/gosoftmx" className="block" target="_blank" rel="noopener noreferrer">
+                    <Image 
+                      src="/icons/linkedin_icon.svg" 
+                      alt="LinkedIn" 
+                      width={28} 
+                      height={28}
+                      className="hover:opacity-80 transition-opacity"
+                    />
+                  </Link>
+                </div>
+              </div>
+              
+              {/* Sección Contáctanos */}
+              <div>
+                <h5 className="text-gray-500 font-medium text-xs uppercase tracking-wider mb-2">Contáctanos</h5>
+                <div className="flex">
+                  {/* WhatsApp - POSICIÓN: cambia marginTop y marginRight */}
+                  <Link href="https://wa.me/message/WAXOLDPJ7UTBA1" className="block" target="_blank" rel="noopener noreferrer" 
+                        style={{ marginTop: '-2.5px', marginRight: '9px' }}>
+                    <Image 
+                      src="/icons/whatsapp_icon.svg" 
+                      alt="WhatsApp" 
+                      width={34} 
+                      height={34}
+                      className="hover:opacity-80 transition-opacity"
+                    />
+                  </Link>
+                  {/* Email - POSICIÓN: cambia marginTop independiente */}
+                  <Link href="mailto:gosoftsolutions25@gmail.com?subject=Consulta sobre servicios - Empezar con GoSoft" className="block" target="_blank" rel="noopener noreferrer"
+                        style={{ marginTop: '-5.5px' }}>
+                    <Image 
+                      src="/icons/email_icon.svg" 
+                      alt="Email" 
+                      width={40} 
+                      height={40}
+                      className="hover:opacity-80 transition-opacity"
+                    />
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -107,7 +125,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link href="https://careers.gosoftsolutions.com" className="text-gray-600 hover:text-sky-500 text-sm transition-colors" target="_blank" rel="noopener noreferrer">
+                <Link href="https://gosoftsolutions.com/careers" className="text-gray-600 hover:text-sky-500 text-sm transition-colors" target="_blank" rel="noopener noreferrer">
                   Trabaja en GoSoft
                 </Link>
               </li>
