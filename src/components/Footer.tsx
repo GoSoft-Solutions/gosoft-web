@@ -73,8 +73,13 @@ const Footer = () => {
                     />
                   </Link>
                   {/* Email - POSICIÓN: cambia marginTop independiente */}
-                  <Link href="mailto:gosoftsolutions25@gmail.com?subject=Consulta sobre servicios - Empezar con GoSoft" className="block" target="_blank" rel="noopener noreferrer"
-                        style={{ marginTop: '-5.5px' }}>
+                  <Link 
+                    href="https://mail.google.com/mail/?view=cm&to=gosoftsolutions25@gmail.com&su=Consulta%20sobre%20servicios%20-%20Empezar%20con%20GoSoft"
+                    className="block"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ marginTop: '-5.5px' }}
+                  >
                     <Image 
                       src="/icons/email_icon.svg" 
                       alt="Email" 
