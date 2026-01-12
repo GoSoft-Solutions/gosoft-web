@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { Metadata } from 'next';
-import LanguageSwitcher from '@/components/LanguageSwitcher';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
   title: 'GoSoft',
@@ -11,11 +12,11 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <div className="min-h-screen bg-gray-100">
-      <div className="absolute top-6 right-6 z-20">
-        <LanguageSwitcher />
-      </div>
+      {/* Header flotante */}
+      <Header />
       
-      <div className="relative h-screen w-full">
+      {/* Contenido principal con padding top para el header flotante */}
+      <div className="relative h-screen w-full pt-24">
         <Image
           src="/images/image_careers.jpg"
           alt="GoSoft Solutions"

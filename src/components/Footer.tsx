@@ -14,7 +14,7 @@ const Footer = () => {
             <div className="space-y-2">
               <div className="flex items-center space-x-3">
                 <Image 
-                  src="/icons/gosft_icon.svg" 
+                  src="/icons/gosftfooter_icon.svg" 
                   alt="GoSoft Logo" 
                   width={279} 
                   height={40}

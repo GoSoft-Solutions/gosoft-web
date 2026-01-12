@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
-import LanguageSwitcher from '@/components/LanguageSwitcher';
+import Header from '@/components/Header';
 
 export const metadata: Metadata = {
   title: 'Personal Data Protection Policy | GoSoft Solutions',
@@ -106,6 +106,9 @@ function PolicyNavigation({ currentPage }: { currentPage?: string }) {
 export default function PersonalDataProtectionPolicyPageEN() {
   return (
     <div className="min-h-screen bg-gray-100">
+      {/* Header */}
+      <Header />
+      
       <div className="relative h-[450px] bg-gradient-to-r from-blue-900 to-blue-700">
         <div className="absolute inset-0 bg-black bg-opacity-40"></div>
         <Image
@@ -122,10 +125,6 @@ export default function PersonalDataProtectionPolicyPageEN() {
               Data Protection
             </h1>
           </div>
-        </div>
-        
-        <div className="absolute top-6 right-6 z-20">
-          <LanguageSwitcher />
         </div>
       </div>
 
