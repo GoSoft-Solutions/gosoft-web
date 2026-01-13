@@ -34,11 +34,10 @@ const Header = () => {
   }, [lastScrollY]);
 
   const navigationItems = [
-    { name: 'Nosotros', href: '/nosotros' },
-    { name: 'Soluciones', href: '/soluciones' },
-    { name: 'Industrias', href: '/industrias' },
+    { name: 'Nuestros Servicios', href: '/servicios' },
+    { name: 'Nuestro Trabajo', href: '/job' },
+    { name: 'Acerca de', href: '/about' },
     { name: 'Carreras', href: '/careers' },
-    { name: 'Clientes', href: '/clientes' },
   ];
 
   const languages = [
@@ -69,7 +68,7 @@ const Header = () => {
           </div>
 
           {/* Navigation - Centrada */}
-          <nav className="hidden lg:flex items-center space-x-2 -translate-x-0">
+          <nav className="hidden lg:flex items-center space-x-2 -translate-x-2">
             {navigationItems.map((item, index) => (
               <div key={item.name} className="relative group">
                 <Link 
