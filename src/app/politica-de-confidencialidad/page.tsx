@@ -48,14 +48,14 @@ function PolicyNavigation({ currentPage }: { currentPage?: string }) {
         </div>
         
         {/* Mobile - Con "Ver más" */}
-        <div className="md:hidden">
-          <div className="flex flex-wrap justify-center gap-1">
+        <div className="flex md:hidden justify-center">
+          <div className="flex items-center gap-1 max-w-full overflow-hidden">
             {policies.slice(0, 3).map((policy, index) => (
               <div key={policy.id} className="flex items-center">
                 <Link
                   href={policy.href}
                   className={`
-                    text-xs px-2 py-1 rounded text-center transition-none
+                    text-xs px-2 py-1 rounded text-center transition-none whitespace-nowrap
                     ${
                       currentPage === policy.id
                         ? 'text-gray-600 cursor-default'
@@ -130,62 +130,57 @@ export default function PrivacyPolicyPage() {
 
       <PolicyNavigation currentPage="politica-de-confidencialidad" />
 
-      <main className="max-w-4xl mx-auto px-4 py-12">
+      <main className="max-w-5xl mx-auto px-11 py-20">
         <div className="bg-transparent">
-          <header className="mb-8">
-            <h2 className="text-3xl font-bold text-gray-900 mb-2">
-              POLÍTICA DE CONFIDENCIALIDAD
+          
+          <div className="text-gray-600 leading-relaxed">
+            
+            <h2 className="text-2xl font-semibold text-gray-550 mb-1 text-left">
+              POLÍTICA DE PRIVACIDAD
             </h2>
-            <p className="text-gray-600">
-              Última actualización: {new Date().toLocaleDateString('es-ES', { 
-                year: 'numeric', 
-                month: 'long', 
-                day: 'numeric' 
-              })}
+            
+            <p className="text-gray-600 text-left mb-10 text-base">
+              Última actualización: 01 de Enero de 2026
             </p>
-          </header>
-
-          <div className="prose prose-lg max-w-none text-gray-800">
-            <p className="text-lg text-gray-700 mb-6">
-              En <strong>GoSoft Solutions</strong>, nos comprometemos a proteger la confidencialidad 
-              de toda la información que nos confía, estableciendo los más altos estándares de seguridad 
-              y privacidad.
-            </p>
-
-            <h3 className="text-xl font-semibold text-gray-900 mt-8 mb-4">Información Confidencial</h3>
-            <ul className="list-disc pl-6 text-gray-700 space-y-2 mb-6">
-              <li>Datos empresariales sensibles</li>
-              <li>Información técnica y comercial</li>
-              <li>Documentación de proyectos</li>
-              <li>Comunicaciones internas</li>
-            </ul>
+            
+            <div className="prose prose-lg max-w-none text-gray-600 space-y-5">
               
-            <h3 className="text-xl font-semibold text-gray-900 mt-8 mb-4">Medidas de Protección</h3>
-            <ul className="list-disc pl-6 text-gray-700 space-y-2 mb-6">
-              <li>Cifrado de extremo a extremo</li>
-              <li>Control de acceso restringido</li>
-              <li>Auditorías de seguridad regulares</li>
-              <li>Acuerdos de confidencialidad</li>
-            </ul>
+              <p className="text-lg leading-6 text-justify">
+                La organización, de cara a la mejora de los procesos y calidad de nuestros productos se responsabiliza y adquiere el firme compromiso 
+                de establecer, desarrollar y mejorar continuamente un Sistema de Gestión de Calidad basado en las normas UNE-EN-ISO 9001:2015 
+                con el fin de:
+              </p>
 
-            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
-              Compromisos de Confidencialidad
-            </h2>
-            <p className="text-gray-700 mb-6">
-              Garantizamos la protección absoluta de la información confidencial mediante protocolos 
-              de seguridad avanzados, acceso controlado y personal capacitado en mejores prácticas 
-              de confidencialidad.
-            </p>
+              <ul className="list-disc pl-6 space-y-2 text-lg">
+                <li className="text-justify">
+                  Satisfacer las necesidades del cliente, proporcionándoles un servicio de calidad basado en la gestión eficaz de nuestros medios y recursos en los plazos establecidos.
+                </li>
+                <li className="text-justify">
+                  Análisis continuo de la información, tanto propia como la aportada por nuestros clientes, de cara a la prevención de posibles fallos y mejora continua de los procesos.
+                </li>
+                <li className="text-justify">
+                  Nuestra meta es lograr una metodología de trabajo basada en la anticipación, evitar fallos antes de que se produzcan.
+                </li>
+                <li className="text-justify">
+                  Mejorar de forma continua la calidad de nuestros productos y servicios.
+                </li>
+                <li className="text-justify">
+                  Compromiso de cumplir los requisitos legales, reglamentarios y de nuestros clientes que sean establecidos.
+                </li>
+                <li className="text-justify">
+                  Servir como marco de referencia para el establecimiento de objetivos de calidad.
+                </li>
+              </ul>
 
-            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
-              Contacto de Seguridad
-            </h2>
-            <p className="text-gray-700 mb-4">
-              Para consultas relacionadas con confidencialidad y seguridad:
-            </p>
-            <p className="text-gray-700">
-              <strong>Email:</strong> security@gosoftsolutions.com
-            </p>
+              <p className="text-lg leading-6 text-justify">
+                La dirección solicita la colaboración de todo el personal para que en el desempeño de sus actividades cumplan el compromiso de calidad participando todos y cada uno de acuerdo con la responsabilidad y autoridad que le corresponde.
+              </p>
+
+              <p className="text-lg leading-6 text-justify">
+                Para ello, es comunicada a toda la empresa para su conocimiento, comprensión y cumplimiento y está a disposición de toda persona o entidad que lo solicite. Además, se revisa, analizándola y actualizándola para su continua adecuación.
+              </p>
+
+            </div>
           </div>
         </div>
       </main>

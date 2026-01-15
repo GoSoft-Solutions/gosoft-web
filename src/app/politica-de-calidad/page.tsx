@@ -130,78 +130,57 @@ export default function QualityPolicyPage() {
 
       <PolicyNavigation currentPage="calidad" />
 
-      <main className="max-w-4xl mx-auto px-4 py-12">
+      <main className="max-w-5xl mx-auto px-11 py-20">
         <div className="bg-transparent">
-          <header className="mb-8">
-            <h2 className="text-3xl font-bold text-gray-900 mb-2">
+          
+          <div className="text-gray-600 leading-relaxed">
+            
+            <h2 className="text-2xl font-semibold text-gray-550 mb-1 text-left">
               POLÍTICA DE CALIDAD
             </h2>
-            <p className="text-gray-600">
-              Última actualización: {new Date().toLocaleDateString('es-ES', { 
-                year: 'numeric', 
-                month: 'long', 
-                day: 'numeric' 
-              })}
-            </p>
-          </header>
-
-          <div className="prose prose-lg max-w-none text-gray-800">
-            <p className="text-lg mb-6">
-              En <strong>GoSoft Solutions</strong>, la calidad es el fundamento de todo lo que hacemos. 
-              Nos comprometemos a entregar soluciones de software de la más alta calidad que superen 
-              las expectativas de nuestros clientes.
-            </p>
-
-            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
-              Nuestro Compromiso
-            </h2>
-            <p className="mb-6">
-              Implementar un sistema de gestión de calidad basado en estándares internacionales 
-              y mejora continua para garantizar la excelencia en todos nuestros procesos y entregables.
-            </p>
-
-            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
-              Principios de Calidad
-            </h2>
-            <ul className="mb-6 space-y-2">
-              <li>Enfoque en el cliente</li>
-              <li>Liderazgo y compromiso</li>
-              <li>Participación del personal</li>
-              <li>Enfoque por procesos</li>
-              <li>Mejora continua</li>
-              <li>Toma de decisiones basada en evidencia</li>
-            </ul>
             
-            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
-              Objetivos de Calidad
-            </h2>
-            <ul className="mb-6 space-y-2">
-              <li>Satisfacción del cliente ≥95%</li>
-              <li>Entrega a tiempo ≥98%</li>
-              <li>Defectos &lt;1% en producción</li>
-              <li>Tiempo de resolución &lt;24h</li>
-              <li>Certificaciones actualizadas</li>
-              <li>Capacitación continua del equipo</li>
-            </ul>
+            <p className="text-gray-600 text-left mb-10 text-base">
+              Última actualización: 01 de Enero de 2026
+            </p>
+            
+            <div className="prose prose-lg max-w-none text-gray-600 space-y-7">
+              
+              <p className="text-lg leading-6 text-justify">
+                La organización, de cara a la mejora de los procesos y calidad de nuestros productos se responsabiliza y adquiere el firme compromiso 
+                de establecer, desarrollar y mejorar continuamente un Sistema de Gestión de Calidad basado en las normas UNE-EN-ISO 9001:2015 
+                con el fin de:
+              </p>
 
-            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
-              Procesos de Calidad
-            </h2>
-            <p className="mb-6">
-              Nuestro sistema de gestión de calidad incluye controles rigurosos en cada fase 
-              del desarrollo, desde la planificación inicial hasta la entrega final y el soporte 
-              post-implementación.
-            </p>
+              <ul className="list-disc pl-8 space-y-2 text-lg">
+                <li className="text-justify">
+                  Satisfacer las necesidades del cliente, proporcionándoles un servicio de calidad basado en la gestión eficaz de nuestros medios y recursos en los plazos establecidos.
+                </li>
+                <li className="text-justify">
+                  Análisis continuo de la información, tanto propia como la aportada por nuestros clientes, de cara a la prevención de posibles fallos y mejora continua de los procesos.
+                </li>
+                <li className="text-justify">
+                  Nuestra meta es lograr una metodología de trabajo basada en la anticipación, evitar fallos antes de que se produzcan.
+                </li>
+                <li className="text-justify">
+                  Mejorar de forma continua la calidad de nuestros productos y servicios.
+                </li>
+                <li className="text-justify">
+                  Compromiso de cumplir los requisitos legales, reglamentarios y de nuestros clientes que sean establecidos.
+                </li>
+                <li className="text-justify">
+                  Servir como marco de referencia para el establecimiento de objetivos de calidad.
+                </li>
+              </ul>
 
-            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
-              Contacto de Calidad
-            </h2>
-            <p className="mb-4">
-              Para consultas sobre nuestros procesos de calidad:
-            </p>
-            <p>
-              <strong>Email:</strong> quality@gosoftsolutions.com
-            </p>
+              <p className="text-lg leading-6 text-justify">
+                La dirección solicita la colaboración de todo el personal para que en el desempeño de sus actividades cumplan el compromiso de calidad participando todos y cada uno de acuerdo con la responsabilidad y autoridad que le corresponde.
+              </p>
+
+              <p className="text-lg leading-6 text-justify">
+                Para ello, es comunicada a toda la empresa para su conocimiento, comprensión y cumplimiento y está a disposición de toda persona o entidad que lo solicite. Además, se revisa, analizándola y actualizándola para su continua adecuación.
+              </p>
+
+            </div>
           </div>
         </div>
       </main>

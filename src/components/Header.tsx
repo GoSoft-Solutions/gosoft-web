@@ -35,7 +35,7 @@ const Header = () => {
 
   const navigationItems = [
     { name: 'Nuestros Servicios', href: '/servicios' },
-    { name: 'Nuestro Trabajo', href: '/job' },
+    { name: 'Nuestro Trabajo', href: '#' },
     { name: 'Acerca de', href: '/about' },
     { name: 'Carreras', href: '/careers' },
   ];

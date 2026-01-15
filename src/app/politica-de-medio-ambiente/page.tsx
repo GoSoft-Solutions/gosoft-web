@@ -5,8 +5,8 @@ import Header from '@/components/Header';
 
 export const metadata: Metadata = {
   title: 'Política Ambiental | GoSoft Solutions',
-  description: 'Política de responsabilidad ambiental y sostenibilidad de GoSoft Solutions.',
-  keywords: 'sostenibilidad, medio ambiente, responsabilidad ambiental, GoSoft Solutions',
+  description: 'Política ambiental y compromiso con la sostenibilidad de GoSoft Solutions.',
+  keywords: 'política ambiental, sostenibilidad, medio ambiente, GoSoft Solutions',
 };
 
 function PolicyNavigation({ currentPage }: { currentPage?: string }) {
@@ -48,14 +48,14 @@ function PolicyNavigation({ currentPage }: { currentPage?: string }) {
         </div>
         
         {/* Mobile - Con "Ver más" */}
-        <div className="md:hidden">
-          <div className="flex flex-wrap justify-center gap-1">
+        <div className="flex md:hidden justify-center">
+          <div className="flex items-center gap-1 max-w-full overflow-hidden">
             {policies.slice(0, 3).map((policy, index) => (
               <div key={policy.id} className="flex items-center">
                 <Link
                   href={policy.href}
                   className={`
-                    text-xs px-2 py-1 rounded text-center transition-none
+                    text-xs px-2 py-1 rounded text-center transition-none whitespace-nowrap
                     ${
                       currentPage === policy.id
                         ? 'text-gray-600 cursor-default'
@@ -130,81 +130,61 @@ export default function EnvironmentalPolicyPage() {
 
       <PolicyNavigation currentPage="ambiental" />
 
-      <main className="max-w-4xl mx-auto px-4 py-12">
+      <main className="max-w-5xl mx-auto px-11 py-20">
         <div className="bg-transparent">
-          <header className="mb-8">
-            <h2 className="text-3xl font-bold text-gray-900 mb-2">
+          
+          <div className="text-gray-600 leading-relaxed">
+            
+            <h2 className="text-2xl font-semibold text-gray-550 mb-1 text-left">
               POLÍTICA AMBIENTAL
             </h2>
-            <p className="text-gray-600">
-              Última actualización: {new Date().toLocaleDateString('es-ES', { 
-                year: 'numeric', 
-                month: 'long', 
-                day: 'numeric' 
-              })}
-            </p>
-          </header>
-
-          <div className="prose prose-lg max-w-none text-gray-800">
-            <p className="text-lg text-gray-700 mb-6">
-              <strong>GoSoft Solutions</strong> reconoce la importancia de proteger el medio ambiente 
-              y se compromete a operar de manera sostenible, minimizando nuestro impacto ambiental 
-              y promoviendo prácticas responsables.
-            </p>
-
-            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
-              Nuestro Compromiso Ambiental
-            </h2>
-            <p className="text-gray-700 mb-8">
-              Implementar tecnologías limpias, reducir nuestro consumo de recursos naturales 
-              y contribuir activamente a la construcción de un futuro más sostenible para las 
-              generaciones venideras.
+            
+            <p className="text-gray-600 text-left mb-10 text-base">
+              Última actualización: 01 de Enero de 2026
             </p>
             
-            <h3 className="text-xl font-semibold text-gray-900 mt-8 mb-4">Eficiencia Energética</h3>
-            <ul className="list-disc pl-6 text-gray-700 space-y-2 mb-6">
-              <li>Servidores optimizados</li>
-              <li>Cloud computing eficiente</li>
-              <li>Algoritmos optimizados</li>
-              <li>Infraestructura verde</li>
-            </ul>
+            <div className="prose prose-lg max-w-none text-gray-600 space-y-7">
               
-            <h3 className="text-xl font-semibold text-gray-900 mt-8 mb-4">Reducción de Residuos</h3>
-            <ul className="list-disc pl-6 text-gray-700 space-y-2 mb-6">
-              <li>Oficina sin papel</li>
-              <li>Reciclaje de equipos</li>
-              <li>Reutilización de hardware</li>
-              <li>Trabajo remoto</li>
-            </ul>
-
-            <h3 className="text-xl font-semibold text-gray-900 mt-8 mb-4">Sostenibilidad Digital</h3>
-            <ul className="list-disc pl-6 text-gray-700 space-y-2 mb-6">
-              <li>Código eficiente</li>
-              <li>Arquitecturas verdes</li>
-              <li>Optimización de recursos</li>
-              <li>Medición de carbono</li>
-            </ul>
-
-            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
-              Objetivos Ambientales
-            </h2>
-            <div className="space-y-4 text-gray-700 mb-6">
-              <p>
-                Nos comprometemos a reducir nuestra huella de carbono en un 50% para 2030, 
-                implementando tecnologías más eficientes y promoviendo prácticas sostenibles 
-                en todos nuestros procesos de desarrollo.
+              <p className="text-lg leading-6 text-justify">
+                Nuestra organización, líder global en soluciones digitales de próxima generación, promueve el crecimiento empresarial responsable a través de un modelo de desarrollo sostenible que garantiza el crecimiento económico, fomenta el bienestar social y protege el medio ambiente.
               </p>
-            </div>
 
-            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
-              Contacto Sostenibilidad
-            </h2>
-            <p className="text-gray-700 mb-4">
-              Para consultas sobre nuestras iniciativas ambientales:
-            </p>
-            <p className="text-gray-700">
-              <strong>Email:</strong> sustainability@gosoftsolutions.com
-            </p>
+              <p className="text-lg leading-6 text-justify">
+                En ese sentido, nuestra organización se compromete a:
+              </p>
+
+              <ul className="list-decimal pl-10 space-y-1 text-lg">
+                <li className="text-justify">
+                  Cumplir con las disposiciones legales ambientales aplicables, así como las voluntariamente aceptadas.
+                </li>
+                <li className="text-justify">
+                  Identificar y evaluar los aspectos e impactos ambientales derivados de la operación.
+                </li>
+                <li className="text-justify">
+                  Promover la eficiencia energética.
+                </li>
+                <li className="text-justify">
+                  Fomentar la conservación del agua.
+                </li>
+                <li className="text-justify">
+                  Evaluar y reducir la huella de carbono para combatir el cambio climático.
+                </li>
+                <li className="text-justify">
+                  Minimizar la generación de residuos asegurando una gestión responsable.
+                </li>
+                <li className="text-justify">
+                  Promover las compras sustentables.
+                </li>
+                <li className="text-justify">
+                  Generar conciencia ambiental dentro y fuera de la organización.
+                </li>
+              </ul>
+
+              <p className="text-lg leading-6 text-justify">
+                Con la presente política ambiental de alcance global, nuestra organización asume el compromiso de proteger y preservar el medio ambiente, prevenir la contaminación y mantener un sistema de gestión que garantice la mejora continua de su desempeño ambiental.
+              </p>
+
+            </div>
           </div>
         </div>
       </main>
