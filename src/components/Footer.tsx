@@ -13,16 +13,16 @@ const Footer = () => {
           <div className="w-full lg:w-105 space-y-6 pr-20">
             <div className="space-y-2">
               <div className="flex items-center space-x-3">
-                <Image 
-                  src="/icons/gosftfooter_icon.svg" 
-                  alt="GoSoft Logo" 
-                  width={279} 
+                <Image
+                  src="/icons/gosftfooter_icon.svg"
+                  alt="GoSoft Logo"
+                  width={279}
                   height={40}
                   className="rounded"
                 />
               </div>
             </div>
-            
+
             <div style={{ maxWidth: '280px' }}>
               <p className="text-gray-600 text-sm leading-relaxed">
                 Creamos experiencias digitales para marcas y empresas, mediante el uso de la tecnología.
@@ -37,43 +37,43 @@ const Footer = () => {
                 <div className="flex space-x-3 items-center">
                   <Link href="https://www.instagram.com/gosoftmx" className="block" target="_blank" rel="noopener noreferrer"
                         style={{ marginRight: '15px' }}>
-                    <Image 
-                      src="/icons/ig_icon.svg" 
-                      alt="Instagram" 
-                      width={30.3} 
+                    <Image
+                      src="/icons/ig_icon.svg"
+                      alt="Instagram"
+                      width={30.3}
                       height={30.3}
                       className="hover:opacity-80 transition-opacity"
                     />
                   </Link>
                   <Link href="https://www.linkedin.com/company/gosoftmx" className="block" target="_blank" rel="noopener noreferrer">
-                    <Image 
-                      src="/icons/linkedin_icon.svg" 
-                      alt="LinkedIn" 
-                      width={28} 
+                    <Image
+                      src="/icons/linkedin_icon.svg"
+                      alt="LinkedIn"
+                      width={28}
                       height={28}
                       className="hover:opacity-80 transition-opacity"
                     />
                   </Link>
                 </div>
               </div>
-              
+
               {/* Sección Contáctanos */}
               <div>
                 <h5 className="text-gray-500 font-medium text-xs uppercase tracking-wider mb-2">Contáctanos</h5>
                 <div className="flex">
                   {/* WhatsApp - POSICIÓN: cambia marginTop y marginRight */}
-                  <Link href="https://wa.me/message/WAXOLDPJ7UTBA1" className="block" target="_blank" rel="noopener noreferrer" 
+                  <Link href="https://wa.me/message/WAXOLDPJ7UTBA1" className="block" target="_blank" rel="noopener noreferrer"
                         style={{ marginTop: '-2.5px', marginRight: '9px' }}>
-                    <Image 
-                      src="/icons/whatsapp_icon.svg" 
-                      alt="WhatsApp" 
-                      width={34} 
+                    <Image
+                      src="/icons/whatsapp_icon.svg"
+                      alt="WhatsApp"
+                      width={34}
                       height={34}
                       className="hover:opacity-80 transition-opacity"
                     />
                   </Link>
                   {/* Email - POSICIÓN: cambia marginTop independiente */}
-                  <Link 
+                  <Link
                     href="#"
                     className="block"
                     style={{ marginTop: '-5.5px' }}
@@ -82,7 +82,7 @@ const Footer = () => {
                       const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
                       const email = 'gosoftsolutions25@gmail.com';
                       const subject = 'Consulta sobre servicios - Empezar con GoSoft';
-                      
+
                       if (isMobile) {
                         // En móvil: intentar abrir app nativa de Gmail
                         window.location.href = `mailto:${email}?subject=${encodeURIComponent(subject)}`;
@@ -92,10 +92,10 @@ const Footer = () => {
                       }
                     }}
                   >
-                    <Image 
-                      src="/icons/email_icon.svg" 
-                      alt="Email" 
-                      width={40} 
+                    <Image
+                      src="/icons/email_icon.svg"
+                      alt="Email"
+                      width={40}
                       height={40}
                       className="hover:opacity-80 transition-opacity"
                     />

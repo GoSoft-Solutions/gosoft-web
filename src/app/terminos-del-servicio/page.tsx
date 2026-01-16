@@ -161,8 +161,8 @@ export default function TermsOfServicePage() {
                 Nos reservamos el derecho de cambiar estos Términos y Condiciones en cualquier momento, con vigencia inmediata después de su publicación en nuestros Sitios. Si viola lo estipulado en estos Términos y Condiciones, podemos rescindir su uso de los Sitios, prohibirle el uso futuro de los Sitios y/o tomar las medidas legales apropiadas en su contra.
               </p>
 
-              <h3 className="text-xl font-semibold text-gray-700 mb-3 mt-8">
-                AVISO DE DERECHOS DE AUTOR Y MARCA REGISTRADA
+              <h3 className="text-xl font-semibold text-gray-700 mb-6 mt-12">
+                Aviso De Derechos De Autor y Marca Registrada
               </h3>
 
               <p className="text-lg leading-6 text-justify">
@@ -170,11 +170,11 @@ export default function TermsOfServicePage() {
               </p>
 
               <p className="text-lg leading-6 text-justify">
-                <strong>Uso permitido:</strong> Los usuarios pueden descargar páginas u otro contenido para su propio uso personal en una sola computadora, pero ninguna parte de dicho contenido puede reproducirse, descargarse, difundirse o transferirse de ninguna forma ni por ningún medio, excepto con el acuerdo previo por escrito de GoSoft y con atribución expresa a este. Usted acepta que solo está autorizado para visitar, ver y retener una copia de las páginas de los Sitios para su uso personal, y que no deberá duplicar, descargar, publicar, modificar o distribuir el material de los Sitios para ningún otro propósito que no sea para uso personal, a menos que lo autoricemos específicamente a hacerlo. También acepta no hacer un enlace profundo al sitio para ningún propósito, a menos que lo autoricemos específicamente a hacerlo.
+                Uso permitido: Los usuarios pueden descargar páginas u otro contenido para su propio uso personal en una sola computadora, pero ninguna parte de dicho contenido puede reproducirse, descargarse, difundirse o transferirse de ninguna forma ni por ningún medio, excepto con el acuerdo previo por escrito de GoSoft y con atribución expresa a este. Usted acepta que solo está autorizado para visitar, ver y retener una copia de las páginas de los Sitios para su uso personal, y que no deberá duplicar, descargar, publicar, modificar o distribuir el material de los Sitios para ningún otro propósito que no sea para uso personal, a menos que lo autoricemos específicamente a hacerlo. También acepta no hacer un enlace profundo al sitio para ningún propósito, a menos que lo autoricemos específicamente a hacerlo.
               </p>
 
-              <h3 className="text-xl font-semibold text-gray-700 mb-3 mt-8">
-                AVISO LEGAL GENERAL Y EXONERACIÓN DE RESPONSABILIDAD
+              <h3 className="text-xl font-semibold text-gray-700 mb-6 mt-12">
+                Aviso Legal General y Exoneración de Responsabilidad
               </h3>
 
               <p className="text-lg leading-6 text-justify">
@@ -193,16 +193,16 @@ export default function TermsOfServicePage() {
                 GoSoft no asume ninguna responsabilidad por las consecuencias derivadas del uso de la información contenida aquí, o del uso de la información obtenida en sitios enlazados, o de cualquier aspecto del contenido de dicha información. GoSoft no se hace responsable y renuncia expresamente a toda responsabilidad por daños y perjuicios de cualquier tipo que surjan del uso, referencia, dependencia o confianza en dicha información.
               </p>
 
-              <h3 className="text-xl font-semibold text-gray-700 mb-3 mt-8">
-                POLÍTICA DE PRIVACIDAD
+              <h3 className="text-xl font-semibold text-gray-700 mb-6 mt-12">
+                Política De Privacidad
               </h3>
 
               <p className="text-lg leading-6 text-justify">
                 GoSoft valora la privacidad individual y queremos darles a los visitantes de nuestro Sitio la oportunidad de saber qué información recopilamos sobre ellos y cómo la tratamos. Si desea obtener más información, visite nuestra página de política de privacidad.
               </p>
 
-              <h3 className="text-xl font-semibold text-gray-700 mb-3 mt-8">
-                DIVISIBILIDAD
+              <h3 className="text-xl font-semibold text-gray-700 mb-6 mt-12">
+                Divisibilidad
               </h3>
 
               <p className="text-lg leading-6 text-justify">

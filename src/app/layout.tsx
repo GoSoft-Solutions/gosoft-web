@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "GoSoft Solutions",
+  title: "GoSoft",
   description: "Empresa líder en desarrollo de software y soluciones tecnológicas",
 };
 

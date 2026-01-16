@@ -1,152 +1,153 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import Link from 'next/link';
-import { ChevronLeftIcon, ChevronRightIcon, Bars3Icon } from '@heroicons/react/24/outline';
+import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/outline';
 
 interface PolicyNavigationProps {
   currentPage?: string;
 }
 
 export default function PolicyNavigation({ currentPage }: PolicyNavigationProps) {
-  const [isCollapsed, setIsCollapsed] = useState(false);
-  const [isMobileOpen, setIsMobileOpen] = useState(false);
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(true);
+
+  const policies = [
+    { name: 'Aviso de Privacidad', href: '/politica-de-proteccion-de-datos-personales', key: 'privacy-policy' },
+    { name: 'Términos de Servicio', href: '/terminos-del-servicio', key: 'terms-conditions' },
+    { name: 'Política de Cookies', href: '/politica-de-cookies', key: 'cookie-policy' },
+    { name: 'Política de Vulnerabilidad', href: '/politica-de-vulnerabilidad', key: 'vulnerability-policy' },
+    { name: 'Política Ambiental', href: '/politica-ambiental', key: 'environmental-policy' },
+  ];
+
+  const scroll = (direction: 'left' | 'right') => {
+    if (!scrollRef.current) return;
+    
+    const scrollAmount = 240; // Aproximadamente el ancho de 2 botones
+    const newScrollLeft = direction === 'left' 
+      ? scrollRef.current.scrollLeft - scrollAmount
+      : scrollRef.current.scrollLeft + scrollAmount;
+    
+    scrollRef.current.scrollTo({
+      left: newScrollLeft,
+      behavior: 'smooth'
+    });
+  };
+
+  const handleScroll = () => {
+    if (!scrollRef.current) return;
+    
+    const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
+    setCanScrollLeft(scrollLeft > 0);
+    setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 1);
+  };
+
+  // Check scroll state on mount and window resize
+  useEffect(() => {
+    if (scrollRef.current) {
+      handleScroll();
+    }
+  }, []);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (scrollRef.current) {
+        handleScroll();
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   return (
-    <>
-      {/* Mobile Menu Button */}
-      <button
-        className="lg:hidden fixed top-4 left-4 z-50 bg-white shadow-lg rounded-md p-2"
-        onClick={() => setIsMobileOpen(!isMobileOpen)}
-      >
-        <Bars3Icon className="h-6 w-6" />
-      </button>
-
-      {/* Mobile Overlay */}
-      {isMobileOpen && (
-        <div
-          className="lg:hidden fixed inset-0 bg-black bg-opacity-50 z-40"
-          onClick={() => setIsMobileOpen(false)}
-        />
-      )}
-
-      {/* Navigation Sidebar */}
-      <aside
-        className={`
-          fixed lg:sticky top-0 left-0 h-screen bg-white shadow-lg z-40
-          transition-all duration-300 ease-in-out
-          ${isCollapsed ? 'lg:w-16' : 'lg:w-80'}
-          ${isMobileOpen ? 'w-80' : 'w-0 lg:w-80 lg:w-16'}
-          ${isMobileOpen ? '' : 'overflow-hidden lg:overflow-visible'}
-        `}
-      >
-        {/* Header */}
-        <div className="p-4 border-b border-gray-200 flex items-center justify-between">
-          <div className={`${isCollapsed ? 'lg:hidden' : ''}`}>
-            <h2 className="text-lg font-semibold text-gray-900">Políticas y Términos</h2>
-            <p className="text-sm text-gray-600">GoSoft Solutions</p>
+    <div className="bg-white border-b border-gray-200 sticky top-0 z-40">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center py-4">
+          
+          {/* Título */}
+          <div className="flex-shrink-0 mr-6">
+            <h2 className="text-lg font-semibold text-gray-900">Políticas Legales</h2>
           </div>
-          
-          {/* Collapse Button - Desktop Only */}
-          <button
-            className="hidden lg:block p-1 hover:bg-gray-100 rounded-md transition-colors"
-            onClick={() => setIsCollapsed(!isCollapsed)}
-          >
-            {isCollapsed ? (
-              <ChevronRightIcon className="h-5 w-5 text-gray-600" />
-            ) : (
-              <ChevronLeftIcon className="h-5 w-5 text-gray-600" />
-            )}
-          </button>
-        </div>
 
-        {/* Navigation Links */}
-        <nav className="p-4 space-y-2 overflow-y-auto h-full pb-20">
-          <Link
-            href="/politicas/aviso-privacidad"
-            className={`
-              block p-3 rounded-md transition-colors relative
-              ${currentPage === 'privacy-policy' 
-                ? 'bg-blue-50 text-blue-700 border-l-4 border-blue-700' 
-                : 'text-gray-700 hover:bg-gray-50 hover:text-gray-900'
-              }
-            `}
-            onClick={() => setIsMobileOpen(false)}
-          >
-            <span className={`${isCollapsed ? 'lg:hidden' : ''} text-sm font-medium`}>
-              Aviso de Privacidad
-            </span>
-            {isCollapsed && (
-              <div className="hidden lg:flex items-center justify-center h-full">
-                <div className="w-2 h-2 bg-gray-400 rounded-full" />
-              </div>
-            )}
-          </Link>
-
-          <Link
-            href="/politicas/terminos-condiciones"
-            className={`
-              block p-3 rounded-md transition-colors relative
-              ${currentPage === 'terms-conditions' 
-                ? 'bg-blue-50 text-blue-700 border-l-4 border-blue-700' 
-                : 'text-gray-700 hover:bg-gray-50 hover:text-gray-900'
-              }
-            `}
-            onClick={() => setIsMobileOpen(false)}
-          >
-            <span className={`${isCollapsed ? 'lg:hidden' : ''} text-sm font-medium`}>
-              Términos y Condiciones
-            </span>
-            {isCollapsed && (
-              <div className="hidden lg:flex items-center justify-center h-full">
-                <div className="w-2 h-2 bg-gray-400 rounded-full" />
-              </div>
-            )}
-          </Link>
-
-          <Link
-            href="/politicas/politica-cookies"
-            className={`
-              block p-3 rounded-md transition-colors relative
-              ${currentPage === 'cookie-policy' 
-                ? 'bg-blue-50 text-blue-700 border-l-4 border-blue-707' 
-                : 'text-gray-700 hover:bg-gray-50 hover:text-gray-900'
-              }
-            `}
-            onClick={() => setIsMobileOpen(false)}
-          >
-            <span className={`${isCollapsed ? 'lg:hidden' : ''} text-sm font-medium`}>
-              Política de Cookies
-            </span>
-            {isCollapsed && (
-              <div className="hidden lg:flex items-center justify-center h-full">
-                <div className="w-2 h-2 bg-gray-400 rounded-full" />
-              </div>
-            )}
-          </Link>
-          
-          {/* Back to Home */}
-          <div className="mt-8 pt-4 border-t border-gray-200">
-            <Link
-              href="/"
-              className={`
-                block p-3 rounded-md transition-colors text-center
-                bg-gray-100 text-gray-700 hover:bg-gray-200 hover:text-gray-900
-              `}
-              onClick={() => setIsMobileOpen(false)}
+          {/* Container con flechas */}
+          <div className="flex items-center flex-1">
+            
+            {/* Flecha izquierda */}
+            <button
+              onClick={() => scroll('left')}
+              className={`flex-shrink-0 p-2 rounded-full transition-all duration-200 mr-2 ${
+                canScrollLeft 
+                  ? 'text-gray-600 hover:text-gray-900 hover:bg-gray-100 cursor-pointer' 
+                  : 'text-gray-300 cursor-not-allowed'
+              }`}
+              disabled={!canScrollLeft}
+              aria-label="Scroll left"
             >
-              <span className={`${isCollapsed ? 'lg:hidden' : ''} text-sm font-medium`}>
+              <ChevronLeftIcon className="h-5 w-5" />
+            </button>
+
+            {/* Navegación scrolleable */}
+            <div 
+              ref={scrollRef}
+              className="flex space-x-2 overflow-x-auto scrollbar-hide flex-1 py-1"
+              onScroll={handleScroll}
+              style={{ 
+                scrollbarWidth: 'none',
+                msOverflowStyle: 'none'
+              }}
+            >
+              {policies.map((policy) => (
+                <Link
+                  key={policy.key}
+                  href={policy.href}
+                  className={`flex-shrink-0 px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 whitespace-nowrap ${
+                    currentPage === policy.key
+                      ? 'bg-orange-100 text-orange-700 border-2 border-orange-300'
+                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200 hover:text-gray-900 border-2 border-transparent hover:border-gray-300'
+                  }`}
+                >
+                  {policy.name}
+                </Link>
+              ))}
+              
+              {/* Botón de volver al inicio */}
+              <Link
+                href="/"
+                className="flex-shrink-0 px-4 py-2 rounded-full text-sm font-medium bg-sky-100 text-sky-700 hover:bg-sky-200 hover:text-sky-800 border-2 border-sky-300 hover:border-sky-400 transition-all duration-200 whitespace-nowrap"
+              >
                 ← Volver al Inicio
-              </span>
-              {isCollapsed && (
-                <div className="hidden lg:flex items-center justify-center h-full">
-                  <div className="text-lg">←</div>
-                </div>
-              )}
-            </Link>
+              </Link>
+            </div>
+
+            {/* Flecha derecha */}
+            <button
+              onClick={() => scroll('right')}
+              className={`flex-shrink-0 p-2 rounded-full transition-all duration-200 ml-2 ${
+                canScrollRight 
+                  ? 'text-gray-600 hover:text-gray-900 hover:bg-gray-100 cursor-pointer' 
+                  : 'text-gray-300 cursor-not-allowed'
+              }`}
+              disabled={!canScrollRight}
+              aria-label="Scroll right"
+            >
+              <ChevronRightIcon className="h-5 w-5" />
+            </button>
           </div>
-        </nav>
-      </aside>
-    </>
+        </div>
+      </div>
+
+      {/* CSS para ocultar scrollbar */}
+      <style jsx>{`
+        .scrollbar-hide {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
+        .scrollbar-hide::-webkit-scrollbar {
+          display: none;
+        }
+      `}</style>
+    </div>
   );
 }
